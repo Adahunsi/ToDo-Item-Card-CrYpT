@@ -1,6 +1,6 @@
 const DUE = new Date("2026-05-01T18:00:00Z");
 
-// ── Time remaining ──────────────────────────────
+// Time remaining
 function getTimeRemaining() {
     const diff = DUE - Date.now();
     const hours = Math.floor(Math.abs(diff) / 3_600_000);
@@ -17,7 +17,7 @@ const timeEl = document.querySelector('[data-testid="test-todo-time-remaining"]'
 timeEl.textContent = getTimeRemaining();
 setInterval(() => { timeEl.textContent = getTimeRemaining(); }, 60_000);
 
-// ── Checkbox toggle ─────────────────────────────
+// Checkbox
 const checkbox  = document.querySelector('[data-testid="test-todo-complete-toggle"]');
 const titleEl   = document.querySelector('[data-testid="test-todo-title"]');
 const statusEl  = document.querySelector('[data-testid="test-todo-status"]');
@@ -29,6 +29,6 @@ checkbox.addEventListener("change", () => {
     statusEl.textContent         = done ? "Done" : "In Progress";
 });
 
-// ── Button handlers ─────────────────────────────
+// Button handlers
 function handleEdit()   { console.log("edit clicked"); }
 function handleDelete() { alert("Delete clicked"); }
