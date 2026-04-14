@@ -1,0 +1,235 @@
+/* ── Reset ── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+ 
+      /* ── Design tokens ── */
+      :root {
+        --font-sans: "Segoe UI", system-ui, sans-serif;
+ 
+        --clr-bg: #ffffff;
+        --clr-surface: #ffffff;
+        --clr-border: #e2e2dc;
+        --clr-text-primary: #1a1a1a;
+        --clr-text-secondary: #5f5f5f;
+        --clr-text-muted: #9a9a9a;
+ 
+        --clr-priority-high-bg: #fde8e8;
+        --clr-priority-high-text: #991b1b;
+        --clr-priority-medium-bg: #fef3cd;
+        --clr-priority-medium-text: #854d0e;
+        --clr-priority-low-bg: #dcfce7;
+        --clr-priority-low-text: #166534;
+ 
+        --clr-status-bg: #eff6ff;
+        --clr-status-text: #1e40af;
+ 
+        --clr-tag-bg: #f1f0eb;
+        --clr-tag-text: #3d3d3a;
+ 
+        --clr-focus: #2563eb;
+ 
+        --radius-card: 16px;
+        --radius-badge: 99px;
+        --radius-tag: 6px;
+ 
+        --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+      }
+ 
+      /* ── Base ── */
+      body {
+        font-family: var(--font-sans);
+        background: var(--clr-bg);
+        color: var(--clr-text-primary);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+ 
+      /* ── Focus ring (visible for keyboard users) ── */
+      :focus-visible {
+        outline: 2px solid var(--clr-focus);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+ 
+      /* ── Card ── */
+      .todo-card {
+        background: var(--clr-surface);
+        border: 1px solid var(--clr-border);
+        border-radius: var(--radius-card);
+        box-shadow: var(--shadow-card);
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 480px;
+      }
+ 
+      /* ── Card header row ── */
+      .card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+      }
+ 
+      .card-header-left {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        flex: 1;
+        min-width: 0;
+      }
+ 
+      /* ── Checkbox ── */
+      .todo-checkbox-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+ 
+      .todo-checkbox {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--clr-focus);
+        cursor: pointer;
+      }
+ 
+      /* ── Title ── */
+      .todo-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--clr-text-primary);
+        line-height: 1.4;
+        word-break: break-word;
+      }
+ 
+      .todo-title.done {
+        text-decoration: line-through;
+        color: var(--clr-text-muted);
+      }
+ 
+      /* ── Badges row ── */
+      .badges-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.75rem;
+      }
+ 
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: var(--radius-badge);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+ 
+      .badge-priority-high {
+        background: var(--clr-priority-high-bg);
+        color: var(--clr-priority-high-text);
+      }
+ 
+      .badge-priority-medium {
+        background: var(--clr-priority-medium-bg);
+        color: var(--clr-priority-medium-text);
+      }
+ 
+      .badge-priority-low {
+        background: var(--clr-priority-low-bg);
+        color: var(--clr-priority-low-text);
+      }
+ 
+      .badge-status {
+        background: var(--clr-status-bg);
+        color: var(--clr-status-text);
+      }
+ 
+      /* ── Description ── */
+      .todo-description {
+        font-size: 0.9rem;
+        color: var(--clr-text-secondary);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+ 
+      /* ── Due date / time remaining ── */
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.25rem;
+        margin-bottom: 1rem;
+        font-size: 0.82rem;
+        color: var(--clr-text-muted);
+      }
+ 
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+ 
+      /* ── Tags ── */
+      .tags-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1.25rem;
+      }
+ 
+      .tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: var(--radius-tag);
+        background: var(--clr-tag-bg);
+        color: var(--clr-tag-text);
+        font-size: 0.78rem;
+        font-weight: 500;
+      }
+ 
+      /* ── Action buttons ── */
+      .card-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        border-top: 1px solid var(--clr-border);
+        padding-top: 1rem;
+        margin-top: 0.25rem;
+      }
+ 
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        padding: 6px 14px;
+        border: 1px solid var(--clr-border);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--clr-text-secondary);
+        font-size: 0.83rem;
+        font-family: inherit;
+        cursor: pointer;
+        transition: background 0.15s, color 0.15s;
+      }
+ 
+      .btn:hover {
+        background: var(--clr-bg);
+        color: var(--clr-text-primary);
+      }
+ 
+      .btn-delete:hover {
+        background: var(--clr-priority-high-bg);
+        color: var(--clr-priority-high-text);
+        border-color: #fca5a5;
+      }
