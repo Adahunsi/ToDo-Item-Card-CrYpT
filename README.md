@@ -2,7 +2,7 @@
 
 A clean, modern, and fully accessible **interactive and stateful** Todo Item Card component built with vanilla HTML, CSS, and JavaScript. This is Stage 1 of the HNG internship task—extending the basic card into a fully editable, stateful component.
 
-## 🎯 Stage 1: Interactive & Stateful Features
+## Stage 1: Interactive & Stateful Features
 
 This Stage 1 build includes:
 - **Full Edit Mode** - Click Edit to modify all task properties
@@ -17,29 +17,29 @@ This Stage 1 build includes:
 ## Features
 
 ### Stage 0 (Core)
-- ✅ **Semantic HTML** - Uses `<article>`, `<h2>`, `<time>`, and proper form elements
-- ✅ **Full Accessibility** - WCAG AA compliant with keyboard navigation, focus states, and ARIA labels
-- ✅ **Responsive Design** - Works seamlessly from mobile (320px) to desktop (1200px+)
-- ✅ **Complete Data-testid Attributes** - All 25+ test identifiers for automated testing
-- ✅ **Modern Styling** - Clean design with CSS custom properties and proper color contrast
-- ✅ **Smart Time Remaining** - Dynamic calculation showing "Due in X days", "Due tomorrow", "Overdue by X hours"
-- ✅ **Interactive Checkbox** - Toggle task completion with visual feedback (strike-through, muted colors)
-- ✅ **Tag System** - Flexible tag display with proper semantic markup
+- **Semantic HTML** - Uses `<article>`, `<h2>`, `<time>`, and proper form elements
+- **Full Accessibility** - WCAG AA compliant with keyboard navigation, focus states, and ARIA labels
+- **Responsive Design** - Works seamlessly from mobile (320px) to desktop (1200px+)
+- **Complete Data-testid Attributes** - All 25+ test identifiers for automated testing
+- **Modern Styling** - Clean design with CSS custom properties and proper color contrast
+- **Smart Time Remaining** - Dynamic calculation showing "Due in X days", "Due tomorrow", "Overdue by X hours"
+- **Interactive Checkbox** - Toggle task completion with visual feedback (strike-through, muted colors)
+- **Tag System** - Flexible tag display with proper semantic markup
 
 ### Stage 1 (Interactive & Stateful)
-- ✅ **Edit Mode** - Full editing interface with form fields
-- ✅ **Status Control Dropdown** - Change status: Pending → In Progress → Done
-- ✅ **Priority Indicator** - Visual left-side accent bar (changes color: Red/High, Orange/Medium, Green/Low)
-- ✅ **Priority Flexibility** - Edit and update priority; display updates immediately
-- ✅ **Expand/Collapse Description** - Long descriptions collapse to preview, expand on demand
-- ✅ **Overdue Indicator** - Red badge appears when due date passes
-- ✅ **Granular Time Updates** - Shows minutes, hours, days with precision
-- ✅ **Checkbox ↔ Status Sync** - Checking box → status becomes "Done", dropdown updates automatically
-- ✅ **State Restoration** - Cancel edit mode → previous values restored
-- ✅ **Form Validation** - Pre-fills with current values
-- ✅ **Focus Management** - Focus moves to edit form, returns to Edit button after save
-- ✅ **Keyboard Shortcuts** - Press Escape to cancel edit mode
-- ✅ **Delete Confirmation** - Shows confirmation dialog before deleting
+- **Edit Mode** - Full editing interface with form fields
+- **Status Control Dropdown** - Change status: Pending → In Progress → Done
+- **Priority Indicator** - Visual left-side accent bar (changes color: Red/High, Orange/Medium, Green/Low)
+- **Priority Flexibility** - Edit and update priority; display updates immediately
+- **Expand/Collapse Description** - Long descriptions collapse to preview, expand on demand
+- **Overdue Indicator** - Red badge appears when due date passes
+- **Granular Time Updates** - Shows minutes, hours, days with precision
+- **Checkbox ↔ Status Sync** - Checking box → status becomes "Done", dropdown updates automatically
+- **State Restoration** - Cancel edit mode → previous values restored
+- **Form Validation** - Pre-fills with current values
+- **Focus Management** - Focus moves to edit form, returns to Edit button after save
+- **Keyboard Shortcuts** - Press Escape to cancel edit mode
+- **Delete Confirmation** - Shows confirmation dialog before deleting
 
 ## Project Structure
 
@@ -177,116 +177,3 @@ git clone <repo-url>
 # Open in browser
 open index.html
 ```
-
-## 📋 Requirements Checklist
-
-### ✅ Stage 0 (Core - All Met)
-- [x] Semantic HTML structure
-- [x] All Stage 0 data-testid attributes present
-- [x] WCAG AA accessibility compliant
-- [x] Responsive layout (320px - 1200px+)
-- [x] Interactive checkbox with completion state
-- [x] Smart time remaining calculations
-- [x] Edit/Delete button functionality
-- [x] Tag system with proper semantic markup
-- [x] Full keyboard navigation support
-- [x] Good color contrast ratios
-
-### ✅ Stage 1 (Interactive & Stateful - All Met)
-
-**Edit Mode**
-- [x] Edit form container with proper data-testid
-- [x] Title input field (pre-populated)
-- [x] Description textarea (pre-populated)
-- [x] Priority select dropdown (Low, Medium, High)
-- [x] Due date datetime-local input
-- [x] Save button (updates all card values)
-- [x] Cancel button (restores previous state)
-- [x] Form fields have `<label>` elements
-- [x] Focus management (focus to form on enter, back to Edit button on exit)
-- [x] Escape key closes edit mode
-
-**Status Controls**
-- [x] Status dropdown/control with data-testid
-- [x] Three options: Pending, In Progress, Done
-- [x] Checkbox ↔ Status dropdown synchronized
-- [x] Status display updates when either control changes
-- [x] Visual state changes based on status (strike-through, muted colors, borders)
-
-**Priority Enhancements**
-- [x] Priority indicator visual accent (left border)
-- [x] Priority indicator changes color by level (Red/Orange/Green)
-- [x] Priority badge updates when edited
-- [x] Priority persists across edit cycles
-
-**Expand/Collapse Behavior**
-- [x] Toggle button with data-testid
-- [x] Collapsible section with data-testid
-- [x] aria-expanded attribute
-- [x] aria-controls linking button to section
-- [x] Auto-shows if description > 100 characters
-- [x] Smooth max-height animation
-- [x] Keyboard accessible
-
-**Time Management Enhancements**
-- [x] Overdue indicator with data-testid
-- [x] Overdue indicator visibility toggles
-- [x] Granular time formatting (minutes, hours, days)
-- [x] Updates every 30 seconds
-- [x] Shows "Completed" when status = Done
-- [x] Time updates stop on completion
-- [x] Accurate overdue detection with red styling
-
-**Visual State Changes**
-- [x] "Done" → strike-through title + muted colors
-- [x] "High priority" → strong visual indicator (red accent)
-- [x] "Overdue" → red accent on border
-- [x] "In Progress" → blue accent on border
-- [x] All transitions are smooth
-
-**Accessibility (Stage 1)**
-- [x] Edit form fields have visible labels
-- [x] Status dropdown has accessible name
-- [x] Expand toggle has aria-expanded and aria-controls
-- [x] Collapsible section has matching id
-- [x] Live time updates use aria-live="polite"
-- [x] Full keyboard tab order maintained
-- [x] Focus trapped in logical order
-
-**Responsiveness**
-- [x] Adapts to 320px mobile
-- [x] Adapts to 768px tablet
-- [x] Adapts to 1024px+ desktop
-- [x] Edit form fields stack vertically on mobile
-- [x] No layout breaking at any size
-- [x] No horizontal overflow
-- [x] Proper text wrapping for long content
-
-**State Management**
-- [x] Clean state object implementation
-- [x] Previous state saved before editing
-- [x] Form fields pre-fill with current values
-- [x] All form inputs update state correctly
-- [x] Cancel restores all previous values
-- [x] Save commits all changes
-
-### Browser Support
-- [x] Chrome/Edge 90+
-- [x] Firefox 88+
-- [x] Safari 14+
-
----
-
-## Submission Checklist for Stage 1
-- [x] All Stage 0 testids still work
-- [x] All Stage 1 testids implemented and functional
-- [x] Edit mode fully functional
-- [x] Status transitions synchronized
-- [x] Expand/collapse accessible and working
-- [x] Overdue logic correct
-- [x] No visual overflow at any screen size
-- [x] Full keyboard navigation
-- [x] Time updates properly
-- [x] Clean state management
-- [x] README updated
-- [x] Code ready for GitHub push
